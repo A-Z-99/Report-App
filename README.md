@@ -1,12 +1,14 @@
 # Notes:
 
-Run npm install to install dependencies before running `ng serve`
+Run `npm install` to install dependencies before running `ng serve`
 This project can make API requests to a storage server, however the API key is not included due to security concerns.
 API requests are performed via `src/app/report.service.ts`.
 
 The password for deletion and changing status is `BaggyJeans` (case sensitive).
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.9.
+
+Compiled project can be found at (https://github.com/A-Z-99/Report-App-compiled)
 
 ## Development server
 
