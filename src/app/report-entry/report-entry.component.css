@@ -1,0 +1,19 @@
+table{
+    min-width: 90vw;
+    /* border-top: 1px solid black; */
+    border-bottom: 1px solid black;
+}
+td{
+    width:25%;
+    max-width: 25%;
+    text-align: center;
+    /* border: 1px solid black; */
+}
+
+.small-data {
+    width:10%;
+}
+
+.xs-data{
+    width:5%
+}

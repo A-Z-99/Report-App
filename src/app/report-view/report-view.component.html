@@ -1,0 +1,38 @@
+<div class="d-flex">
+    <div [ngClass]="{'flex-fill': !report.imageURL && report.imageURL != ''}">
+      <span *ngIf="report.imageURL != '' && report.imageURL !== undefined; then imgDisplay"></span>
+      <ng-template #imgDisplay><img [src]="report.imageURL" alt="image of the baddie" class="d-block mx-auto"> </ng-template>
+    </div>
+    <div class="flex-fill">
+      <app-location-show></app-location-show>
+    </div>
+  </div>
+<table>
+    <tr>
+        <td>Location</td>
+        <td>{{report.location.name}}</td>
+    </tr>
+    <tr>
+        <td>Baddie Name</td>
+        <td>{{report.baddieName}}</td>
+    </tr>
+    <tr>
+        <td>Reported By</td>
+        <td>{{report.reportedBy}} (Phone number: {{report.reportedByPhoneNumber | phoneNumberFormat}})</td>
+    </tr>
+    <tr>
+        <td>Time of Report</td>
+        <td>{{report.reportTime | verboseDate}}</td>
+    </tr>
+    <tr>
+        <td>Status</td>
+        <td>{{report.status | statusDisplay}}<button class="btn btn-outline-primary pad"
+            (click)="changeStatus($event)"
+        >Change</button></td>
+    </tr>
+    <tr>
+        <td>Extra info</td>
+        <td>{{report.extraInfo}}</td>
+    </tr>
+</table>
+<a routerLink="/main-page" class="btn btn-primary btn-lg">Return to Main Page</a>

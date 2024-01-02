@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    background-color:rgb(50, 50, 255); 
+    margin: 20px;
+}
+
+main{
+    background-color: white;
+    box-shadow: 1px 1px 10px 5px rgb(214, 182, 24);
+}
+

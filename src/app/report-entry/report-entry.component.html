@@ -1,0 +1,21 @@
+<table>
+    <tr>
+        <td><span [textContent]="report.location.name"></span></td>
+        <td>{{report.baddieName}}</td>
+        
+        <td>{{report.reportTime | consiseDate}}</td>
+        
+        <td class="small-data"
+            
+        >{{report.status | statusDisplay}}</td>
+        <!-- (changeStatus)="statusUpdate($event)" -->
+        <td class="small-data"><button
+            (click)="onEdit()">More Info</button></td>
+        <td class="xs-data"><button 
+            class="btn btn-outline-danger"
+            (click)="onDelete($event,report.reportTime)"
+        >&#10005;</button></td>
+    </tr>
+</table>
+<!-- <td>{{report.reportedBy}}{{report.reportedByPhoneNumber}}</td> -->
+    <!-- <td>{{report.extraInfo}}</td> -->

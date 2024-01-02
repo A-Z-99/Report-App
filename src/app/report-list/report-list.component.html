@@ -1,0 +1,21 @@
+<table>
+    <thead>
+        <tr>
+            <th>Location<button
+                (click)="sortBy($event,'location')"><img src="../../resources/sort.png" alt="Sort symbol" width="15" height="15"></button></th>
+            <th>Baddie's name<button
+                (click)="sortBy($event,'baddieName')"><img src="../../resources/sort.png" alt="Sort symbol" width="15" height="15"></button></th>
+            <th>Time Reported<button
+                (click)="sortBy($event,'reportTime')"><img src="../../resources/sort.png" alt="Sort symbol" width="15" height="15"></button></th>
+            <th class="small-data">Status<button
+                (click)="sortBy($event,'status')"><img src="../../resources/sort.png" alt="Sort symbol" width="15" height="15"></button></th>
+            <th class="small-data"></th>
+            <th class="xs-data"></th>
+        </tr>
+    </thead>
+</table>
+<app-report-entry
+    *ngFor="let report of reports"
+    [report]="report"
+    (delete)="onReportDelete($event)"
+></app-report-entry>

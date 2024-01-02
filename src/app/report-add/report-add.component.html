@@ -1,0 +1,62 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit(form.value)" class="mt-4">
+    <fieldset class="border p-2">
+        <legend class="text-primary">ADD REPORT</legend>
+
+        <div class="mb-3 row">
+            <label for="location" class="form-label col-sm-12">LOCATION</label>
+            <div class="col-sm-12">
+                <input type="text" class="form-control" name="location" placeholder="Type or choose a location" formControlName="location" list="locationList" (input)="locationLoad()">
+                <datalist id="locationList">
+                  <option *ngFor="let location of locationList" [value]="location.name"></option>
+                </datalist>
+            </div>
+        </div>
+
+        <div class="mb-3 row">
+            <label for="baddieName" class="form-label col-sm-12">BADDIE NAME</label>
+            <div class="col-sm-12">
+                <input type="text" class="form-control" name="baddieName" placeholder="Enter baddie name" formControlName="baddieName">
+            </div>
+        </div>
+
+        <div class="mb-3 row">
+            <label for="reportedBy" class="form-label col-sm-12">YOUR NAME</label>
+            <div class="col-sm-12">
+                <input type="text" class="form-control" name="reportedBy" placeholder="Enter your name" formControlName="reportedBy">
+            </div>
+        </div>
+
+        <div class="mb-3 row">
+            <label for="reportedByPhoneNumber" class="form-label col-sm-12">YOUR PHONE NUMBER</label>
+            <div class="col-sm-12">
+                <input type="number" inputmode="numeric" class="form-control" name="reportedByPhoneNumber" placeholder="Enter your phone number" formControlName="reportedByPhoneNumber">
+            </div>
+        </div>
+
+        <div class="mb-3 row">
+            <label for="extraInfo" class="form-label col-sm-12">EXTRA INFO</label>
+            <div class="col-sm-12">
+                <input type="text" class="form-control" name="extraInfo" placeholder="Enter extra info" formControlName="extraInfo">
+            </div>
+        </div>
+        
+        <div class="mb-3 row">
+            <label for="imageURL" class="form-label col-sm-12">IMAGE (OPTIONAL)</label>
+            <div class="col-sm-12">
+                <input type="text" class="form-control" name="imageURL" placeholder="Enter image url" formControlName="imageURL">
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="coordinates" class="form-label col-sm-12">SELECT LOCATION OF INCIDENT</label>
+        <app-location-select #locationSelectComponent (updateCoordinate)="onUpdateCoordinate($event)"></app-location-select>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <button class="btn btn-outline-primary" [disabled]="!form.valid">SUBMIT</button>
+            </div>
+        </div>
+        
+    </fieldset>
+</form>
+
+<a routerLink="/main-page" class="btn btn-primary btn-lg mt-3">Return to Main Page</a>
