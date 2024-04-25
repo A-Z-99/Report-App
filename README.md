@@ -1,4 +1,9 @@
-# Notes:
+# Preview
+![Preview 1](https://github.com/A-Z-99/Report-App/blob/main/preview/preview1.jpg)
+![Preview 2](https://github.com/A-Z-99/Report-App/blob/main/preview/preview2.jpg)
+![Preview 3](https://github.com/A-Z-99/Report-App/blob/main/preview/preview3.jpg)
+
+# Notes
 
 Run npm install to install dependencies before running `ng serve`
 This project can make API requests to a storage server, however the API key is not included due to security concerns.
