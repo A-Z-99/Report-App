@@ -1,7 +1,7 @@
 # Preview
-![Preview 1](https://github.com/A-Z-99/Report-App/blob/main/preview/preview1.jpg)
-![Preview 2](https://github.com/A-Z-99/Report-App/blob/main/preview/preview2.jpg)
-![Preview 3](https://github.com/A-Z-99/Report-App/blob/main/preview/preview3.jpg)
+![Preview 1](https://github.com/A-Z-99/Report-App/blob/main/preview/preview1.JPG)
+![Preview 2](https://github.com/A-Z-99/Report-App/blob/main/preview/preview2.JPG)
+![Preview 3](https://github.com/A-Z-99/Report-App/blob/main/preview/preview3.JPG)
 
 # Notes
 
